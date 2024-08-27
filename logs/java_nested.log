@@ -1,0 +1,21 @@
+2023-10-10 14:00:00 INFO  com.example.Main - Application started
+2023-10-10 14:01:00 ERROR com.example.Main - An error occurred
+java.lang.NullPointerException: Cannot invoke "String.length()" because "str" is null
+    at com.example.Main.main(Main.java:15)
+    at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+    at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+    at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+    at com.example.Main.main(Main.java:10)
+2023-10-10 14:02:00 INFO  com.example.Main - Processing data
+2023-10-10 14:03:00 ERROR com.example.Main - Failed to process data
+java.io.IOException: Failed to read file
+    at com.example.FileProcessor.readFile(FileProcessor.java:25)
+    at com.example.Main.processData(Main.java:30)
+    at com.example.Main.main(Main.java:20)
+    at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+    at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+    at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+    at com.example.Main.main(Main.java:10)
+2023-10-10 14:04:00 INFO  com.example.Main - Application finished

@@ -1,0 +1,15 @@
+pipeline:
+  inputs:
+    - name: tail
+      path: logs/spring_regex.log
+      refresh_interval: 1
+      read_from_head: true
+      parser: spring_log
+  filters:
+    - name: grep
+      match: "*"
+      regex: level .*  # .*INFO/ERROR/DEBUG/TRACE
+  outputs:
+    - name: stdout
+      match: "*"
+      #format: json

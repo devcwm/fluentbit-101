@@ -1,0 +1,13 @@
+pipeline:
+  inputs:
+    - name: tail
+      path: logs/apache_common.log
+      refresh_interval: 1
+      parser: apache2
+      read_from_head: true
+  outputs:
+    - name: stdout
+      match: "*"
+service:
+  parser_file: parsers.conf
+  flush: 1

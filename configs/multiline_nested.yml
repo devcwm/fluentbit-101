@@ -1,0 +1,13 @@
+pipeline:
+  inputs:
+    - name: tail
+      path: logs/java_nested.log
+      refresh_interval: 1
+      multiline.parser: multiline-java
+      read_from_head: true
+  outputs:
+    - name: stdout
+      match: "*"
+service:
+  parser_file: parsers/parsers_multiline.conf
+  flush: 1
